@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="blogpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blog Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"><span id="subscribe">Subscribe</span></div>
+      <div class="box"><span id="blog">Blog Post</span></div>
+      <div class="box"><div class="signup"><span id="icon"><i class="fas fa-search"></i></span><span id="signup"><button class="signupbtn">Sign Up</button></span></div></div>
+    </div>
+    <hr>
+    <div class="navcontainer">
+    <nav class="responsive">
+      
+      <ul>
+        <li><a href="#">World</a></li>
+        <li><a href="#">U.S.</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Opinion</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Style</a></li>
+        <li><a href="#">Travel</a></li>
+    </nav>
+  </div>
+    <div class="blogpost1">
+    <div class="item"><span id="blog1title">
+      Title of a longer<br>
+      featured blog post.
+    </span>
+  </div>
+    <div class="item"><span id="blog1text">
+      Multiple lines of text that form the ledw,informing<br>
+      readers quickly and efficiently about what's most intresting<br>
+      in this post's content 
+    </span >
+  </div>
+    <div class="item"><span id="blog1cont">
+      Continue reading...
+    </span>
+  </div>
+    </div>
+    <div class="cardcontainer">
+      <div class="card">
+        <div class="info">
+        <span class="topic">World</span><br/>
+        <span class="posttitle">Featured post</span><br/>
+        <span class="day">Nov 12</span><br/>
+        <span class="content">This is a wider card with supporting text<br/>
+           below as a natural lead-in to a additional<br/>
+          content.</span><br/>
+          <span class="contread">Continue reading</span><br/>
+      </div>
+      <div class="thumbnail">
+        Thumbnail
+      </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <span class="topic">Design</span><br/>
+          <span class="posttitle">Post title</span><br/>
+          <span class="day">Nov 11</span><br/>
+          <span class="content">This is a wider card with supporting text<br/>
+             below as a natural lead-in to a additional<br/>
+            content.</span><br/>
+            <span class="contread">Continue reading</span><br/>
+        </div>
+        <div class="thumbnail">
+          Thumbnail
+        </div>
+      </div>
+    </div>
+    <div class="blogcontainer">
+      <div class="blogcontainer1">
+        <span class="firehoes">From The Firehoes</span>
+        <hr>
+        <div id="blogsfromstore">
+          
+        </div>
+      </div>
+      <div class="blogcontainer2">
+        <span class="about"><span class="abouttitle">About</span>
+          <span>The sun was shining brightly in the clear blue sky.<br>
+            The gentle breeze carried<br>
+            the sweet scent of blooming flowers,<br>
+            filling the senses with a delightful fragrance.<br></span>
+        </span>
+        <span class="archives"><span class="archivestitle">Archives</span>
+      <span class="monthsul">
+        <span>March 2014</span>
+        <span>February 2014</span>
+        <span>January 2014</span>
+        <span>December 2014</span>
+        <span>November 2014</span>
+        <span>October 2014</span>
+        <span>September 2014</span>
+        <span>August 2014</span>
+        <span>July 2014</span>
+        <span>June 2014</span>
+        <span>May 2014</span>
+        <span>April 2014</span>
+      </span>
+    </span>
+        <span class="elsewhere"><span class="elsewheretitle">Elsewhere</span>
+    <span class="elesewherecontent">
+      <span>Github</span>
+      <span>twitter</span>
+      <span>Facebook</span>
+    </span>
+      </div>
+    </div>
+    <div>
+      <button class="round-button" id="rdbtn1">Older</button>
+      <button class="round-button" id="rdbtn2">Newer</button>
+    </div>
+  </body>
+  <script>
+    let data = [];
+    const div = document.querySelector('#blogsfromstore');
+    data = JSON.parse(localStorage.getItem('data')) || [];
+    const button1 = document.querySelector('#rdbtn1');
+    const button2 = document.querySelector('#rdbtn2');
+    if(data.length==0){
+      const dataempty= document.createElement('span');
+      dataempty.classList.add('dataempty');
+      dataempty.textContent=`No data in localstorage, Please submit your blog using the submit form to display it here`;
+      div.appendChild(dataempty);
+      button1.style.display='none';
+      button2.style.display='none';
+      console.log('fail')
+    }else{
+    for (const item of data) {
+      const mydate=item.date
+      console.log('success')
+      const inputDate = mydate;
+const parts = inputDate.split('-');
+const year = parts[0];
+const monthNumber = parseInt(parts[1], 10);
+const dayNumber = parseInt(parts[2], 10);
+const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const monthName = monthNames[monthNumber - 1];
+      const span = document.createElement('span');
+      const title = document.createElement('span');
+      const date = document.createElement('span');
+      const name = document.createElement('span');
+      const blog = document.createElement('span');
+      const dateandname= document.createElement('span');
+      const dataempty= document.createElement('span');
+      span.classList.add('postspan');
+      title.classList.add('posttitle1');
+      name.classList.add('postname');
+      date.classList.add('postdate');
+      blog.classList.add('postblog');
+      dataempty.classList.add('dataempty');
+
+      title.textContent=item.headline;
+      blog.textContent=item.blog;
+      date.textContent=`${monthName}, ${year} by `;
+      name.textContent=item.name;
+      dataempty.textContent=`No data in localstorage, Please submit your blog using the submit form to display it here.`
+      dateandname.appendChild(date)
+      dateandname.appendChild(name)
+      span.appendChild(title)
+      span.appendChild(dateandname)
+      span.appendChild(blog)
+      div.appendChild(span);
+      
+    }
+  }
+    
+    </script>
+</html>

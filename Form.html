@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Submission Form</title>
+  </head>
+<body>
+  <p>Submit Your Blog Using Below Given Form</p>
+<form id="my-form">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  <label for="topic">Topic:</label>
+  <input type="text" id="topic" name="topic">
+  <label for="headline">Headline:</label>
+  <input type="text" id="headline" name="headline">
+  <label for="blog">Blog:</label>
+  <input type="text" id="blog" name="blog">
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date">
+  <input type="submit"></input>
+</form>
+<style src="./form.css">
+
+   </style>
+   <script>
+    let data = [];
+    const existingData = JSON.parse(localStorage.getItem('myData') || '{}');
+    const form = document.querySelector('#my-form');
+    const tableBody = document.querySelector('#my-table tbody');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const Key = Date.now().toString();
+      const formData = new FormData(event.target);
+      const jsonData = {};
+      for (const [key, value] of formData) {
+        jsonData[key] = value;
+      }
+      data.push(jsonData);
+      localStorage.setItem('data', JSON.stringify(data));
+      // const row = document.createElement('tr');
+      // const nameCell = document.createElement('td');
+      // const emailCell = document.createElement('td');
+      // const topicCell = document.createElement('td');
+      // const headlineCell = document.createElement('td');
+      // const blogCell = document.createElement('td');
+      // nameCell.textContent = jsonData.name;
+      // emailCell.textContent = jsonData.email;
+      // topicCell.textContent = jsonData.topic;
+      // headlineCell.textContent = jsonData.headline;
+      // blogCell.textContent = jsonData.blog;
+      // row.appendChild(nameCell);
+      // row.appendChild(emailCell);
+      // row.appendChild(topicCell);
+      // row.appendChild(headlineCell);
+      // row.appendChild(blogCell);
+      // tableBody.appendChild(row);
+      event.target.reset();
+    });
+   </script>
+</html>

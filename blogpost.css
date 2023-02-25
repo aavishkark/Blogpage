@@ -1,0 +1,341 @@
+body{
+    font-family: sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .box {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .signup{
+    display: flex;
+    justify-content: flex-end;
+  }
+  #blog{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  #icon{
+    margin-top: 10px;
+    padding-right: 10px;
+  }
+  .signupbtn{
+    padding: 10px 10px;
+    font-size: 15px;
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .signupbtn:hover {
+    background-color: #000000;
+    color: white;
+  }
+  #subscribe{
+    font-size: 20px;
+  }
+  nav {
+  
+    overflow: hidden;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    background-color: #9a9a9a;
+  }
+  
+  .icon {
+    display: none;
+  }
+  .blogpost1{
+          display: flex;
+          flex-direction: column;
+          height: 350px;
+          border: 1px solid #ccc;
+          background-color: #333333;
+          color: white;
+          height:max-content;
+        }
+  .item {
+          padding: 10px;
+        }
+  #blog1title{
+    font-weight: bolder;
+          font-size: 30px;
+          font-style: italic;
+        }
+        #blog1text{
+          
+          font-size: 20px;
+          }
+        #blog1cont{
+          font-weight: bolder;
+          font-size: 20px;
+          }
+          .cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 30px;
+    width: 50%;
+    justify-content: space-between;
+    flex-basis: 700px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    height:max-content;
+  }
+  .info{
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  }
+  .thumbnail{
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25px;
+  background-color: #484848;
+  color: #fff;
+  justify-content: center;
+  align-items: center; 
+  
+  }
+  .topic{
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(0, 94, 255);
+  }
+  .posttitle{
+    font-size: 50px;
+  font-weight: bolder;
+  }
+  .day{
+    font-size: 17px;
+    color: #9a9a9a;
+  }
+  .content{
+    font-size: 25px;
+  }
+  .contread{
+    font-size: 25px;
+    color: rgb(0, 94, 255);
+  }
+  .blogcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .blogcontainer1{
+     width: 70%;
+     height: max-content;
+     border-radius: 10px;
+  }
+  .blogcontainer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     width: 30%;
+     height: max-content;
+     border-radius: 10px;
+  }
+  .about{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: rgb(244, 244, 244);
+    width: max-content;
+    font-size: 20px;
+    padding: 20px;
+    
+  }
+  .abouttitle{
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .archives{
+    display: flex;
+    align-items:start;
+    flex-direction: column;
+    justify-content: space-between;
+    width: max-content;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .archivestitle{
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .monthsul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    color: rgb(0, 94, 255);
+  }
+  .elsewhere{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: rgb(0, 94, 255);
+    margin-top: 30px;
+  
+  }
+  .elsewheretitle{
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #000000;
+    padding: 5px;
+  }
+  .elesewherecontent{
+    display: flex;
+    flex-direction: column; 
+    margin-left:5px ;
+  }
+  .firehoes{
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  hr{
+    margin-right: 20px;
+    border-color: #ffffff;
+  }
+  #blogsfromstore{
+    display: flex;
+    flex-direction: column;
+    max-height: max-content;
+  }
+  .postspan{
+    display: flex;
+    flex-direction: column;
+  }
+  .posttitle1{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .postdate{
+    font-size: 15px;
+    color: #9a9a9a;
+  }
+  .postname{
+    font-size: 15px;
+    color: rgb(0, 94, 255);
+    font-weight: bold;
+  }
+  .postblog{
+    margin-top: 10px;
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  .round-button {
+    border: 2px solid #000000;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+  }
+  .dataempty{
+    display: flex;
+    height: max-content;
+    font-size: 30px;
+    font-weight: bold;
+    color: #484848;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  @media screen and (max-width: 950px) {
+    nav ul {
+      
+      flex-direction: column;
+      display: none;
+      text-align: center;
+    }
+  
+    nav li {
+      float: none;
+      height: 30px;
+      background-color: #333333;
+    }
+    nav li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+  
+  }
+  
+    .icon {
+      display: block;
+      text-align: right;
+    }
+    .responsive ul {
+    display: block;
+  }
+  }
+  @media screen and (max-width: 400px) {
+
+    .container {
+        flex-direction: column; 
+      }
+    .cardcontainer {
+      flex-direction: column;
+    }
+    .blogcontainer{
+        flex-direction: column;
+    }
+  
+    .card {
+      flex-basis: auto;
+    }
+  }
+  @media screen and (max-width: 1240px) {
+
+    
+  }
